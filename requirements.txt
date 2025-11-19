@@ -1,5 +1,5 @@
 # Data Analysis and Manipulation
-pandas==2.1.4
+pandas
 numpy==1.26.2
 scipy==1.11.4
 
@@ -21,11 +21,12 @@ pymysql==1.1.0
 scipy==1.11.4
 pingouin==0.5.4
 
-# Jupyter Notebook
-jupyter==1.0.0
-ipykernel==6.27.1
+# Dashboard and Visualization
+streamlit
+plotly==5.18.0
 
-# Additional Tools
-openpyxl==3.1.2
-requests==2.31.0
-python-dotenv==1.0.0
+# Statistical Tools
+pingouin==0.5.4
+
+# Product Management Tools
+jinja2==3.1.2
