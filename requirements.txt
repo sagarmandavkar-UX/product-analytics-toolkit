@@ -18,15 +18,10 @@ psycopg2-binary==2.9.9
 pymysql==1.1.0
 
 # A/B Testing and Experimentation
-scipy==1.11.4
 pingouin==0.5.4
 
 # Dashboard and Visualization
 streamlit
-plotly==5.18.0
-
-# Statistical Tools
-pingouin==0.5.4
 
 # Product Management Tools
 jinja2==3.1.2
