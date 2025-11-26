@@ -220,7 +220,7 @@ By exploring this project, you'll learn:
 
 **Sagar Mandavkar**
 - GitHub: [@sagarmandavkar-UX](https://github.com/sagarmandavkar-UX)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/sagar-mandavkar)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/sagarmandavkar)
 - Education: Vanderbilt University
 
 ## 📄 License
