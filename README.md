@@ -1,238 +1,290 @@
-# 📊 Product Analytics Toolkit
+# Product Analytics Toolkit
 
-> A comprehensive Product Analytics Toolkit showcasing data science and product management skills through real-world analytics, A/B testing, feature prioritization, and SQL-based insights.
+A product analytics case study that connects **user behavior → funnel diagnosis → segmentation → experimentation → prioritization**.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![SQL](https://img.shields.io/badge/SQL-Analytics-orange.svg)](https://www.sql.org/)
+The goal is not to build another dashboard full of charts. It is to show how a product manager or analyst can move from raw behavioral events to a defensible product decision.
 
-## 🎯 Project Overview
-
-This repository demonstrates end-to-end product analytics capabilities essential for Product Management roles, combining:
-- **Data Analysis**: Python-based analytics dashboards with conversion funnels and cohort analysis
-- **Statistical Testing**: A/B testing framework with statistical significance testing
-- **SQL Analytics**: Complex queries for product metrics, user retention, and revenue analysis
-- **PM Tools**: RICE framework for feature prioritization
-- **Real Data**: 45+ rows of e-commerce user behavior data
-
-## 📁 Project Structure
-
-```
-product-analytics-toolkit/
-├── data/
-│   └── ecommerce_data.csv          # Sample e-commerce dataset
-├── analysis/
-│   └── product_analytics_dashboard.py   # Main analytics dashboard
-├── ab_testing/
-│   └── ab_test_framework.py        # A/B testing with z-tests
-├── sql_queries/
-│   └── product_metrics.sql         # SQL queries for product KPIs
-├── pm_tools/
-│   └── feature_prioritization_RICE.py  # RICE scoring framework
-├── requirements.txt                # Python dependencies
-└── README.md                       # This file
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-Python 3.8+
-pandas
-numpy
-matplotlib
-seaborn
-scipy
-```
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/sagarmandavkar-UX/product-analytics-toolkit.git
-cd product-analytics-toolkit
-```
-
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the analytics dashboard
-```bash
-cd analysis
-python product_analytics_dashboard.py
-```
-
-## 💡 Key Features
-
-### 1. Product Analytics Dashboard
-**File**: `analysis/product_analytics_dashboard.py`
-
-- **Conversion Metrics**: Track sessions, users, conversion rates, revenue
-- **Funnel Analysis**: Page view → Add to cart → Purchase funnel with drop-off rates
-- **Cohort Analysis**: User retention and repeat purchase behavior
-- **Device/Channel Performance**: Conversion rates by device type and marketing channel
-- **Revenue Trends**: Daily revenue tracking and visualization
-
-**Key Metrics Calculated**:
-- Conversion Rate
-- Average Order Value (AOV)
-- Customer Lifetime Value (CLV)
-- Cart Abandonment Rate
-
-### 2. A/B Testing Framework
-**File**: `ab_testing/ab_test_framework.py`
-
-- Statistical hypothesis testing using z-tests
-- P-value calculation for significance testing
-- Lift percentage calculation
-- Automated test result reporting
-
-**Example Use Case**: Testing new checkout flow (control vs treatment)
-
-### 3. SQL Product Metrics
-**File**: `sql_queries/product_metrics.sql`
-
-**Queries Include**:
-- Daily Active Users (DAU) / Monthly Active Users (MAU)
-- Conversion funnel analysis with stage-wise drop-offs
-- Revenue breakdown by product category
-- User retention cohort analysis
-- Device and channel performance metrics
-
-### 4. RICE Feature Prioritization
-**File**: `pm_tools/feature_prioritization_RICE.py`
-
-**RICE Score = (Reach × Impact × Confidence) / Effort**
-
-- Automated scoring for feature prioritization
-- Visualization of prioritized features
-- Example features with real-world context
-
-**Example Features Analyzed**:
-- Personalized Recommendations
-- One-Click Checkout
-- Loyalty Program
-- Push Notifications
-
-## 📊 Sample Data
-
-The dataset (`data/ecommerce_data.csv`) includes:
-- **45+ user sessions** with complete journey tracking
-- **Multiple product categories**: Electronics, Clothing, Home, Beauty
-- **A/B test groups**: Control and Treatment variants
-- **Multi-channel data**: Organic, Paid, Email, Social
-- **Device types**: Mobile, Desktop, Tablet
-- **Full event tracking**: page_view, add_to_cart, purchase
-
-## 🎓 Skills Demonstrated
-
-### Technical Skills
-- **Python**: pandas, numpy, matplotlib, seaborn, scipy
-- **SQL**: CTEs, window functions, aggregations, joins
-- **Statistics**: Hypothesis testing, z-tests, significance testing
-- **Data Visualization**: Charts, graphs, dashboards
-
-### Product Management Skills
-- Conversion funnel analysis
-- A/B testing design and interpretation
-- Feature prioritization frameworks (RICE)
-- KPI definition and tracking
-- Data-driven decision making
-- User behavior analysis
-
-## 📈 Example Output
-
-### Conversion Funnel Results
-```
-Stage              Sessions    Conversion_Rate
-Page Views         20          100.00%
-Add to Cart        15          75.00%
-Purchase          8           40.00%
-```
-
-### A/B Test Results
-```
-Control Rate:     35.2%
-Treatment Rate:   42.7%
-Lift:             +21.3%
-P-value:          0.023 (Significant)
-```
-
-## 🔧 Usage Examples
-
-### Run Product Analytics Dashboard
-```python
-from analysis.product_analytics_dashboard import ProductAnalyticsDashboard
-
-dashboard = ProductAnalyticsDashboard('../data/ecommerce_data.csv')
-dashboard.generate_full_report()
-```
-
-### Run A/B Test Analysis
-```python
-from ab_testing.ab_test_framework import ABTestFramework
-
-ab_test = ABTestFramework('../data/ecommerce_data.csv')
-results = ab_test.run_statistical_test()
-print(results)
-```
-
-### Prioritize Features with RICE
-```python
-from pm_tools.feature_prioritization_RICE import RICEPrioritization
-
-rice = RICEPrioritization()
-rice.add_feature('Feature Name', reach=10000, impact=3, confidence=80, effort=4)
-prioritized = rice.get_prioritized_list()
-```
-
-## 📚 Use Cases
-
-This toolkit is ideal for:
-- **Product Managers**: Analyzing user behavior and making data-driven decisions
-- **Data Analysts**: Building comprehensive product dashboards
-- **Growth Teams**: Running and analyzing A/B tests
-- **PM Interviews**: Demonstrating technical and analytical skills
-- **Portfolio Projects**: Showcasing PM and data science capabilities
-
-## 🎯 Learning Outcomes
-
-By exploring this project, you'll learn:
-1. How to structure product analytics projects
-2. Statistical testing for product experiments
-3. SQL queries for product metrics
-4. Feature prioritization frameworks
-5. Data visualization for stakeholder communication
-
-## 📝 Future Enhancements
-
-- [ ] Add R-based statistical analysis
-- [ ] Implement cohort retention heatmaps
-- [ ] Build interactive Streamlit dashboard
-- [ ] Add user segmentation analysis
-- [ ] Include predictive modeling (churn, LTV)
-- [ ] Create product roadmap templates
-
-## 👤 Author
-
-**Sagar Mandavkar**
-- GitHub: [@sagarmandavkar-UX](https://github.com/sagarmandavkar-UX)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/sagarmandavkar)
-- Education: Vanderbilt University
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built to demonstrate Product Management and Data Analytics skills
-- Sample data structure inspired by real-world e-commerce platforms
-- RICE framework based on Intercom's prioritization methodology
+> The bundled e-commerce dataset is illustrative/synthetic and is used to demonstrate methodology. Results should not be interpreted as live business performance.
 
 ---
 
-⭐ If you find this project helpful for your PM journey, please consider starring the repository!
+## Product problem
+
+Product teams often have plenty of event data but still struggle to answer the questions that matter:
+
+- Where are users dropping out of the journey?
+- Is the problem broad or concentrated in a specific segment?
+- What hypothesis should we test next?
+- Did an experiment actually improve the product?
+- Which opportunity should the team prioritize?
+
+This toolkit organizes those questions into one decision loop:
+
+**Measure → Diagnose → Segment → Hypothesize → Experiment → Decide → Prioritize**
+
+---
+
+## What is shipped
+
+### Product analytics engine
+
+`analysis/product_analytics_dashboard.py`
+
+- Converts event-level data into a session-level analytical table
+- Tracks purchase conversion, cart abandonment, AOV, revenue per session, users, and sessions
+- Measures page-view → add-to-cart → purchase funnel performance
+- Calculates stage-to-stage conversion and drop-off
+- Compares conversion and monetization by device, channel, geography, and experiment group
+- Surfaces a simple product-opportunity summary based on the largest funnel loss
+- Exports funnel and revenue visualizations to `outputs/`
+
+### A/B testing framework
+
+`ab_testing/ab_test_framework.py`
+
+- Evaluates conversion at the session level
+- Calculates control and treatment conversion rates
+- Reports absolute difference and relative lift
+- Runs a two-sided pooled proportion z-test
+- Calculates a 95% confidence interval for the conversion difference
+- Returns a decision-oriented recommendation rather than only a p-value
+
+### SQL product metrics
+
+`sql_queries/product_metrics.sql`
+
+Example queries for:
+
+- DAU / MAU
+- conversion funnel analysis
+- revenue by product category
+- retention-style cohort analysis
+- device and acquisition-channel performance
+
+### RICE prioritization
+
+`pm_tools/feature_prioritization_RICE.py`
+
+Implements:
+
+**RICE = (Reach × Impact × Confidence) / Effort**
+
+for comparing product opportunities once evidence has been gathered.
+
+### Product strategy
+
+`product/PRODUCT_STRATEGY.md`
+
+Documents:
+
+- target users
+- jobs to be done
+- KPI tree
+- product questions
+- experimentation principles
+- roadmap
+- portfolio narrative
+
+---
+
+## Core product questions
+
+### 1. Where is the biggest funnel problem?
+
+The toolkit measures:
+
+`Page View → Add to Cart → Purchase`
+
+and separates overall conversion from stage-to-stage drop-off so the team can identify the highest-leverage problem before proposing a solution.
+
+### 2. Which users are most affected?
+
+The analysis can compare behavior across:
+
+- device
+- acquisition channel
+- country
+- experiment group
+
+This helps avoid making a roadmap decision from an overall average that may hide a segment-specific issue.
+
+### 3. Does a proposed change work?
+
+The experiment framework answers more than “is p < 0.05?” It reports:
+
+- control conversion
+- treatment conversion
+- absolute change
+- relative lift
+- p-value
+- 95% confidence interval
+- statistical significance
+- ship / reject / continue-learning recommendation
+
+### 4. What should we build next?
+
+Once an opportunity has supporting evidence, the RICE module provides a simple structure for comparing reach, impact, confidence, and effort.
+
+---
+
+## Product metrics
+
+### Primary outcome
+
+**Completed Purchases**
+
+### Driver metrics
+
+- Add-to-cart rate
+- Cart-to-purchase conversion
+- Overall purchase conversion
+- Average order value
+- Revenue per session
+
+### Diagnostic metrics
+
+- Funnel stage drop-off
+- Conversion by device
+- Conversion by channel
+- Conversion by geography
+- Experiment-group performance
+
+For a real production experiment, the product strategy also recommends guardrails such as checkout errors, refunds/cancellations, latency, support contacts, and margin. Those fields are not present in the bundled sample data, so the repository does not claim to measure them.
+
+---
+
+## Repository structure
+
+```text
+product-analytics-toolkit/
+├── analysis/
+│   └── product_analytics_dashboard.py
+├── ab_testing/
+│   └── ab_test_framework.py
+├── data/
+│   └── ecommerce_data.csv
+├── pm_tools/
+│   └── feature_prioritization_RICE.py
+├── product/
+│   └── PRODUCT_STRATEGY.md
+├── sql_queries/
+│   └── product_metrics.sql
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Quick start
+
+```bash
+git clone https://github.com/sagarmandavkar-UX/product-analytics-toolkit.git
+cd product-analytics-toolkit
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run the product analytics report:
+
+```bash
+python analysis/product_analytics_dashboard.py
+```
+
+Run the A/B test report:
+
+```bash
+python ab_testing/ab_test_framework.py
+```
+
+Run RICE prioritization:
+
+```bash
+python pm_tools/feature_prioritization_RICE.py
+```
+
+---
+
+## Example workflow
+
+A PM using this toolkit would follow this sequence:
+
+1. **Measure:** review purchase conversion, cart abandonment, AOV, and revenue per session.
+2. **Diagnose:** identify the largest stage-to-stage funnel drop.
+3. **Segment:** determine whether the problem is concentrated on a device or acquisition channel.
+4. **Hypothesize:** define the user problem and expected behavior change.
+5. **Experiment:** compare control and treatment with pre-defined success criteria.
+6. **Decide:** interpret effect size, uncertainty, significance, and guardrails.
+7. **Prioritize:** compare the validated opportunity against competing roadmap items using RICE.
+
+This structure is intended to demonstrate product judgment as well as technical analysis.
+
+---
+
+## Technical stack
+
+- **Python:** pandas, NumPy, SciPy
+- **Visualization:** Matplotlib
+- **Statistics:** proportion testing and confidence intervals
+- **SQL:** CTEs, window functions, aggregation, cohort-style queries
+- **Product:** funnel analysis, KPI design, experimentation, segmentation, RICE prioritization
+
+---
+
+## Product principles
+
+**Use the correct grain.** Event rows should not automatically be treated as independent users or sessions.
+
+**Diagnose before proposing features.** The largest visible metric is not always the most important problem.
+
+**Segment before generalizing.** Overall conversion can hide substantial behavioral differences.
+
+**Experiments are decision tools.** Statistical significance is one input, not the entire product decision.
+
+**Do not present synthetic results as live impact.** This repository demonstrates methods and product thinking, not production-company performance.
+
+---
+
+## Roadmap
+
+### P0
+
+- Automated tests for funnel and experiment calculations
+- Lightweight interactive dashboard
+- Experiment guardrail configuration
+
+### P1
+
+- Sample-size and statistical-power calculator
+- Experiment registry with hypothesis and decision logs
+- Cohort retention analysis using longitudinal user data
+- Behavioral segmentation
+
+### P2
+
+- Metric-definition catalog
+- Event instrumentation schema
+- Churn/LTV modeling when supported by appropriate longitudinal data
+- Automated anomaly detection
+
+---
+
+## PM portfolio framing
+
+**Product Analytics Toolkit | Product Analytics & PM**  
+Python · SQL · Statistics · Experimentation
+
+> Built a product analytics decision toolkit that transforms event-level commerce data into session-level funnels, segment analysis, A/B-test decisions, and RICE prioritization. Structured the workflow around diagnosing user friction, validating hypotheses, quantifying experiment uncertainty, and prioritizing the next product action.
+
+---
+
+## Author
+
+**Sagar Mandavkar**  
+Vanderbilt University  
+GitHub: [@sagarmandavkar-UX](https://github.com/sagarmandavkar-UX)  
+LinkedIn: [sagarmandavkar](https://www.linkedin.com/in/sagarmandavkar)
+
+## License
+
+MIT License
