@@ -1,27 +1,8 @@
-# Data Analysis and Manipulation
-pandas
-numpy==1.26.2
-scipy==1.11.4
+# Core analytics
+pandas>=2.1,<3
+numpy>=1.26,<3
+scipy>=1.11,<2
 
-# Data Visualization
-matplotlib==3.8.2
-seaborn==0.13.0
-plotly==5.18.0
-
-# Statistical Analysis
-statsmodels==0.14.1
-scikit-learn==1.3.2
-
-# Database and SQL
-sqlalchemy==2.0.23
-psycopg2-binary==2.9.9
-pymysql==1.1.0
-
-# A/B Testing and Experimentation
-pingouin==0.5.4
-
-# Dashboard and Visualization
-streamlit
-
-# Product Management Tools
-jinja2==3.1.2
+# Visualization
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
