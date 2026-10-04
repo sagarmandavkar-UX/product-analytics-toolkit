@@ -1,31 +1,4 @@
-# Analytics + AI Decision Science Portfolio
-
-Five end-to-end portfolio projects for **Data Analyst, AI Data Analyst, Product Analyst, and Analytics Data Scientist** roles, plus the original product analytics toolkit. Every case study is reproducible with seeded demo data, produces decision-ready outputs, and separates honest demo results from claims about real organizations.
-
-| Project | Business question | Methods | Run |
-|---|---|---|---|
-| [Policy Causal Evaluation](projects/01_policy_causal_evaluation/) | Did a policy change the outcome? | DiD, two-way fixed effects, clustered SEs, pre-trend test | `python projects/01_policy_causal_evaluation/analysis.py` |
-| [Hospital Price Transparency](projects/02_hospital_price_transparency/) | How much do negotiated rates vary, and why? | messy-data QA, price normalization, log-price regression | `python projects/02_hospital_price_transparency/analysis.py` |
-| [LLM Evaluation Lab](projects/03_llm_evaluation_lab/) | Which model is reliable, and where does it fail? | labeled evals, bootstrap CIs, error taxonomy, Cohen's kappa | `python projects/03_llm_evaluation_lab/evaluation.py` |
-| [Experimentation Decision Engine](projects/04_experimentation_decision_engine/) | Should an experiment launch? | power analysis, CUPED, heterogeneous effects, decision rule | `python projects/04_experimentation_decision_engine/experiment.py` |
-| [Retention + Churn Copilot](projects/05_retention_churn_copilot/) | Who is likely to churn, why, and what is intervention worth? | logistic scoring, cohort SQL, root-cause rules, unit economics | `python projects/05_retention_churn_copilot/pipeline.py` |
-
-## Portfolio design
-
-```mermaid
-flowchart LR
-    A[Raw or demo data] --> B[Validation + cleaning]
-    B --> C[SQL / statistical model]
-    C --> D[Uncertainty + diagnostics]
-    D --> E[Decision recommendation]
-    E --> F[CSV / JSON artifacts]
-```
-
-Run the full portfolio test suite with `python -m unittest discover -s tests -v`.
-
----
-
-## Original product analytics toolkit
+# Product Analytics Toolkit
 
 A product analytics case study that connects **user behavior → funnel diagnosis → segmentation → experimentation → prioritization**.
 
