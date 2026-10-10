@@ -1,5 +1,7 @@
 # Product Analytics Toolkit
 
+[![CI](https://github.com/sagarmandavkar-UX/product-analytics-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/sagarmandavkar-UX/product-analytics-toolkit/actions/workflows/ci.yml)
+
 A product analytics case study that connects **user behavior → funnel diagnosis → segmentation → experimentation → prioritization**.
 
 The goal is not to build another dashboard full of charts. It is to show how a product manager or analyst can move from raw behavioral events to a defensible product decision.
