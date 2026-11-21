@@ -6,7 +6,7 @@ A product analytics case study that connects **user behavior → funnel diagnosi
 
 The goal is not to build another dashboard full of charts. It is to show how a product manager or analyst can move from raw behavioral events to a defensible product decision.
 
-> The bundled e-commerce dataset is illustrative/synthetic and is used to demonstrate methodology. Results should not be interpreted as live business performance.
+> The bundled e-commerce dataset is illustrative/synthetic and is used to demonstrate methodology. It contains only 44 event rows from 20 sessions, so the funnel and A/B outputs show how the calculations work, not evidence about any real product. Results should not be interpreted as live business performance.
 
 ---
 
@@ -164,13 +164,15 @@ product-analytics-toolkit/
 ├── ab_testing/
 │   └── ab_test_framework.py
 ├── data/
-│   └── ecommerce_data.csv
+│   └── ecommerce_data.csv      # 44 synthetic event rows, 20 sessions
 ├── pm_tools/
 │   └── feature_prioritization_RICE.py
 ├── product/
 │   └── PRODUCT_STRATEGY.md
 ├── sql_queries/
 │   └── product_metrics.sql
+├── .github/workflows/          # CI, CodeQL and dependency review
+├── LICENSE
 ├── requirements.txt
 └── README.md
 ```
@@ -247,6 +249,14 @@ This structure is intended to demonstrate product judgment as well as technical 
 
 ---
 
+## Limitations
+
+- The sample data is tiny and synthetic, so statistical results from the bundled A/B test are illustrative only.
+- Guardrail metrics such as checkout errors, refunds, latency and margin are not in the data and are not measured.
+- CI runs the three scripts end to end but there is not yet a unit-test suite for the funnel and experiment calculations (see the P0 roadmap).
+
+---
+
 ## Roadmap
 
 ### P0
@@ -271,15 +281,6 @@ This structure is intended to demonstrate product judgment as well as technical 
 
 ---
 
-## PM portfolio framing
-
-**Product Analytics Toolkit | Product Analytics & PM**  
-Python · SQL · Statistics · Experimentation
-
-> Built a product analytics decision toolkit that transforms event-level commerce data into session-level funnels, segment analysis, A/B-test decisions, and RICE prioritization. Structured the workflow around diagnosing user friction, validating hypotheses, quantifying experiment uncertainty, and prioritizing the next product action.
-
----
-
 ## Author
 
 **Sagar Mandavkar**  
@@ -289,4 +290,4 @@ LinkedIn: [sagarmandavkar](https://www.linkedin.com/in/sagarmandavkar)
 
 ## License
 
-MIT License
+Released under the [MIT License](LICENSE).
